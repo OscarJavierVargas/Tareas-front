@@ -1,3 +1,37 @@
+# Task Management Application
+
+Este es un proyecto de gestión de tareas desarrollado con Angular para el frontend y Spring Boot para el backend. Este README proporciona instrucciones para ejecutar la aplicación localmente.
+
+## Requisitos Previos
+
+- [Node.js](https://nodejs.org/) (incluye npm)
+- [Angular CLI](https://angular.io/cli) - Se puede instalar globalmente usando `npm install -g @angular/cli`.
+- [Java JDK 8 o superior](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Maven](https://maven.apache.org/) o [Gradle](https://gradle.org/) para el backend (opcional según la configuración del proyecto)
+
+## Clonar el Repositorio
+
+Primero, clona el repositorio en tu máquina local:
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_DEL_REPOSITORIO>
+
+Configuración del Frontend (Angular)
+Instalar Dependencias
+
+Navega al directorio del frontend y ejecuta el siguiente comando para instalar las dependencias del proyecto Angular:  npm install
+
+Ejecutar la Aplicación
+
+Inicia el servidor de desarrollo para el proyecto Angular:   ng serve
+
+
+
+
+
+
+
 # FrontTareas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.

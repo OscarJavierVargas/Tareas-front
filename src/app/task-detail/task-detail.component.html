@@ -1,0 +1,47 @@
+<p class="text-center">¡El detalle de la tarea!</p>
+
+<h2 class="text-center mb-4">{{ isEditMode ? 'Edit' : 'Create' }} Task</h2>
+
+<form (ngSubmit)="saveTask()" class="container">
+
+
+  <div class="list-group">
+    <h2 [routerLink]="['/tasks', task.id]" class="mb-1">Title: {{ task.title }}</h2>
+    <p class="mb-1">Description: {{ task.description }}</p>
+    <small>Created At: <strong>{{ task.createdAt | date: 'short' }}</strong></small>
+    <small>Status: <strong>{{ task.estatus }}</strong></small><br>
+  </div>
+
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" [(ngModel)]="task.title" name="title" class="form-control"  />
+  </div>
+  
+  <div class="form-group mt-3">
+    <label for="description">Description:</label>
+    <input id="description" [(ngModel)]="task.description" name="description" class="form-control" />
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="status">Status:</label>
+    <select id="status" [(ngModel)]="task.estatus" name="status" class="form-control">
+      <option *ngFor="let status of statusOptions" [value]="status">
+        {{ status }}
+      </option>
+    </select>
+  </div>
+  
+  
+  <div class="mt-4">
+    <button style="margin: 30px;" type="submit" class="btn btn-primary">
+      {{ isEditMode ? 'Updatee' : 'Create' }}
+    </button>
+    <button *ngIf="isEditMode" (click)="deleteTask()" class="btn btn-danger ml-2">
+      Deletee
+    </button>
+  </div>
+  <div>
+    <a style="margin: 30px;" [routerLink]="['']" class="btn btn-info">Lista Tareas</a>
+  </div>
+</form>
